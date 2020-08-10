@@ -25,8 +25,8 @@ public class GUI implements ActionListener, ItemListener {
 	JFrame window = new JFrame("Card Game!");
 	JButton button = new JButton("Deal");
 	JPanel contentPane = new JPanel(new BorderLayout());
-	JPanel sPanel = new JPanel(new BorderLayout());
-	JPanel valuePanel = new JPanel(new BorderLayout());
+	JPanel suitPan = new JPanel(new BorderLayout());
+	JPanel valuePan = new JPanel(new BorderLayout());
 	JLabel backCardImage = new JLabel(new ImageIcon(backCard.getCardImage()));
 	JLabel cardImage;
 	JLabel gameStats;
@@ -60,8 +60,8 @@ public class GUI implements ActionListener, ItemListener {
 		// creating panel in window
 		contentPane.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
 		contentPane.setLayout(new GridLayout(2, 3, 20, 20));
-		sPanel.setLayout(new GridLayout(0, 1));
-		valuePanel.setLayout(new GridLayout(0, 1));
+		suitPan.setLayout(new GridLayout(0, 1));
+		valuePan.setLayout(new GridLayout(0, 1));
 
 		// creating card image
 		imgIcon = new ImageIcon();
@@ -79,19 +79,19 @@ public class GUI implements ActionListener, ItemListener {
 		valueSelection = new JComboBox(value);
 
 		suitSelection.addItemListener(this);
-		sPanel.add(suitLabel);
-		sPanel.add(suitSelection);
+		suitPan.add(suitLabel);
+		suitPan.add(suitSelection);
 
 		valueSelection.addItemListener(this);
-		valuePanel.add(valueLabel);
-		valuePanel.add(valueSelection);
+		valuePan.add(valueLabel);
+		valuePan.add(valueSelection);
 
 		// Adding labels to panel
 		contentPane.add(backCardImage);
-		contentPane.add(sPanel);
+		contentPane.add(suitPan);
 		contentPane.add(gameStats);
 		contentPane.add(cardImage);
-		contentPane.add(valuePanel);
+		contentPane.add(valuePan);
 		
 		contentPane.add(button);
 		window.add(contentPane, BorderLayout.CENTER);
