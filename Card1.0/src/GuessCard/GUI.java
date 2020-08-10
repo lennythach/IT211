@@ -23,7 +23,7 @@ public class GUI implements ActionListener, ItemListener {
 	
 	Card backCard = new Card(100,100, ImageIO.read(new File("images/b.gif")));
 	JFrame window = new JFrame("Card Game!");
-	JButton button = new JButton("Deal");
+	JButton button = new JButton(new ImageIcon("images/play-button.png"));
 	JPanel contentPane = new JPanel(new BorderLayout());
 	JPanel suitPan = new JPanel(new BorderLayout());
 	JPanel valuePan = new JPanel(new BorderLayout());
